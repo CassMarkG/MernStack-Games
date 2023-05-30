@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    color: #426696;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+  }
+  
+  h2,
+  p {
+    color: #3631b6;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+  
+  h3 {
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+
+main{
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: linear-gradient(to right top, #e3e3ee,#aeaccc); */
+    background-color: #4583c5c9;
+    background-image: 
+        radial-gradient(at 47% 33%, hsla(205, 52%, 54%, 0.815) 0, transparent 59%), 
+        radial-gradient(at 47% 33%, hsla(205, 52%, 54%, 0.815) 0, transparent 59%);
+    font-family: "Poppins",sans-serif;
+}
+
+@media (width >= 500px){
+  main{padding: 0;}
+}
+
+.glass{
+    min-height: 80vh;
+    width: 100%;
+    /* background: white;
+    background: linear-gradient(to right bottom,
+    rgba(255,255,255,0.3),
+    rgba(255,255,255,0.3));
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    display: flex; */
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.8px);
+    z-index: 2;
+    -webkit-backdrop-filter: blur(4.8px);
+    border: 1px solid rgba(255, 255, 255, 0.39);
+    display: flex;
+}
+
+.avatar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* margin-left: 20px;
+  margin-top: 20px; */
+}
+.avatar img{
+  width: 50px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.avatar h3{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.circle1,.circle2{
+    background: white;
+    background: linear-gradient(to right bottom, 
+    rgba(255,255,255,0.8),
+    rgba(255,255,255,0.3));
+    height: 20rem;
+    width: 20rem;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.circle1{
+    top: 5%;
+    right: 10%;
+}
+
+.circle2{
+    bottom: 2%;
+    left: 10%;
+}
+
+.dashboard{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    border-radius: 2rem;
+}
+
+@media (width >= 500px){
+  .dashboard{width:400px;}
+}
+
+nav{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav-item{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  cursor: pointer;
+}
+
+.nav-item img{
+  width: 30px;
+  border-radius: 50%;
+  margin: auto;
+  opacity: 0.6;
+}
+
+.nav-item p{
+  margin-left: 15px;
+}
+
+nav li{
+  display: flex;
+  margin: 1rem 0rem;
+  padding: 1rem 2rem;
+}
+
+nav li:hover {
+  /* display: block; */
+  backdrop-filter: blur(0.001px);
+}
+
+nav span{
+  position: relative;
+  right: 100px;
+  top:5px;
+}
+
+nav a{
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Poppins",sans-serif;
+  text-decoration: none;
+}
+
+.topbar{
+  border: 1px solid rgb(87, 85, 85,0.5);
+  width: 100%;
+  margin-top: 10px;
+  
+}
+.topbar:hover{
+  backdrop-filter: none;
+}
+
+#logout{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  
+}
+
+#logout img{
+  width: 30px;
+  border-radius: 50%;
+  margin: auto;
+  opacity: 0.6;
+}
+
+#logout p{
+  margin-left: 15px;
+}
+
+/* .link{
+    display: flex;
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+}
+
+.link h2 {
+    padding: 0rem 2rem;
+  } */
+
+.games{
+    flex: 2;
+}
+.games li{
+  list-style: none;
+}
+
+.pro{
+    background: linear-gradient(to right top, #65a8df, #7373ea);
+  border-radius: 2rem;
+  color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+.pro img {
+    position: absolute;
+    top: -10%;
+    right: 10%;
+  }
+  
+  .pro h2 {
+    width: 40%;
+    color: white;
+    font-weight: 600;
+  }
+
+  /* Games */
+
+  .statuslist{
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .statuslist input {
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    border: none;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+
+  .statuslist {
+    position: relative;
+    top: 20px;
+    margin-bottom: 3rem;
+  }
+  
+  .status input {
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    border: none;
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 10px;
+  }
+
+  .status h1{
+    position: relative;
+    bottom: 140px;
+    font-size: 25px;
+  }
+
+  .status li{
+    list-style: none;
+  }
+  
+  .games {
+
+    margin: 5rem;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: linear-gradient(to left top,
+    rgba(255,255,255,0.3),
+    rgba(255,255,255,0.1));
+  }
+  
+  .card {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(
+      to left top,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.5)
+    );
+    border-radius: 1rem;
+    margin: 2rem 0rem;
+    padding: 2rem;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+  }
+
+  .words{
+    display: flex;
+    justify-content: space-between;
+  }
+  .words h3{
+    position: relative;
+    left: 5px;
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+  
+  .progress {
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    width: 100%;
+    height: 25%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .progress::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(236, 236, 236);
+    position: relative;
+    left: 60%;
+  }
+  
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  } 
+  
+   .percentage {
+    font-weight: bold;
+    background: linear-gradient(to right top, #ca4242, #0c81c5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .rightNav{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 2rem;
+  }
+
+  .cards{
+    
+  }
+  .cards .carousel{
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  .cards li{
+    list-style: none;
+  }
+
+  .rightNav li{
+    display: flex;
+    margin: 1rem 0rem;
+    padding: 1rem 2rem;
+  }
+  
+  .navitem2{
+    display: flex;
+    
+  }
+  .navitem3{
+    display: flex;
+    margin-top: 100px;
+  }
+
+  .needat{
+    display: flex;
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+  }
+
+  
+
+  
